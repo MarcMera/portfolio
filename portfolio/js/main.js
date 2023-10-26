@@ -1,0 +1,11 @@
+var typed = new Typed('.typed', {
+    strings: ["Web Developer", "Web Designer", "Frontend Developer", "Backend Developer"],
+    typeSpeed: 60,
+    backSpeed: 60,
+    loop: true
+});
+
+ScrollReveal().reveal('.card', { delay: 200, easing: 'ease-out', interval: 200, scale: 1.2, reset: true, duration: 1000 });
+ScrollReveal().reveal('.project', { delay: 200, easing: 'ease-out', interval: 200, scale: 1.2, reset: true, duration: 1000 });
+
+particlesJS("particles-js", { "particles": { "number": { "value": 160, "density": { "enable": true, "value_area": 1000 } }, "color": { "value": "#0ef" }, "shape": { "type": "circle", "stroke": { "width": 0, "color": "#0ef" }, "polygon": { "nb_sides": 5 }, "image": { "src": "img/github.svg", "width": 100, "height": 100 } }, "opacity": { "value": 0.5, "random": false, "anim": { "enable": false, "speed": 1, "opacity_min": 0.1, "sync": false } }, "size": { "value": 3, "random": true, "anim": { "enable": false, "speed": 40, "size_min": 0.1, "sync": false } }, "line_linked": { "enable": true, "distance": 200, "color": "#0ef", "opacity": 0.5, "width": 1 }, "move": { "enable": true, "speed": 5, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false, "attract": { "enable": false, "rotateX": 600, "rotateY": 1200 } } }, "interactivity": { "detect_on": "window", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "repulse" }, "resize": true }, "modes": { "grab": { "distance": 359.64035964035963, "line_linked": { "opacity": 1 } }, "bubble": { "distance": 400, "size": 40, "duration": 2, "opacity": 8, "speed": 3 }, "repulse": { "distance": 263.73626373626377, "duration": 0.4 }, "push": { "particles_nb": 4 }, "remove": { "particles_nb": 2 } } }, "retina_detect": false }); var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function () { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);
