@@ -48,3 +48,16 @@
     color: #04fc43;
     font-size: 13px;
 }
+
+@media screen and (max-width: 450px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .project {
+        width: 70%;
+        background-color: red;
+    }
+
+}

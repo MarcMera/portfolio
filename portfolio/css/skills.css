@@ -49,7 +49,7 @@
 .card .percent svg circle:nth-child(2) {
     stroke: var(--color);
     stroke-dasharray: 440;
-    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    stroke-dashoffset: calc(440 - (440 * 100)/100);
 }
 
 @keyframes fadeIn {
@@ -67,8 +67,8 @@
     position: absolute;
     inset: 5px;
     z-index: 20;
-    transform: rotate(calc(3.6deg * var(--num)));
-    animation: animateDot 0.5s linear forwards;
+    transform: rotate(calc(3.6deg * 100));
+    animation: animateDot 1.5s linear forwards infinite;
 }
 
 .dot:nth-child(2) {
@@ -84,12 +84,9 @@
     position: absolute;
     inset: 5px;
     z-index: 10;
-    transform: rotate(calc(3.6deg * var(--num)));
-    animation: animateDot 0.5s linear forwards;
+    transform: rotate(calc(3.6deg * 100));
+    animation: animateDot 1s linear forwards infinite;
 }
-
-
-
 
 
 @keyframes animateDot {
@@ -98,7 +95,7 @@
     }
 
     100% {
-        transform: rotate(calc(3.6deg * var(--num)));
+        transform: rotate(calc(3.6deg * 100));
     }
 }
 
@@ -150,4 +147,11 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.75);
+}
+
+@media screen and (max-width: 450px) {
+    .skills {
+        margin-top: 500px;
+    }
+
 }
